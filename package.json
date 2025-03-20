@@ -1,0 +1,17 @@
+{
+  "name": "indivisiblefitchburgma.org",
+  "version": "1.0.0",
+  "description": "This is a static website for the Indivisible Fitchburg chapter.",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server",
+    "dev": "http-server -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

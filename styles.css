@@ -510,6 +510,31 @@ nav ul li ul.dropdown li a:hover {
     color: var(--secondary-color);
 }
 
+.mailing-address {
+    text-align: center;
+    max-width: 600px;
+    margin: 3rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.mailing-address i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.mailing-address h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.mailing-address address {
+    font-style: normal;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
 .newsletter {
     text-align: center;
     max-width: 600px;

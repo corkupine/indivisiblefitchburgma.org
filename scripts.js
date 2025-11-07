@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Notification banner close functionality
+    const notificationBanner = document.getElementById('notification-banner');
+    const closeBannerBtn = document.getElementById('close-banner');
+    
+    // Close banner when X is clicked (will reappear on page refresh)
+    closeBannerBtn?.addEventListener('click', () => {
+        notificationBanner?.classList.add('hidden');
+    });
+
     // Load header and footer components if they exist
     const includeComponents = () => {
         document.querySelectorAll('[data-include]').forEach(element => {

@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
         notificationBanner?.classList.add('hidden');
     });
 
+    // Yellow notification banner close functionality
+    const notificationBannerYellow = document.getElementById('notification-banner-yellow');
+    const closeBannerYellowBtn = document.getElementById('close-banner-yellow');
+    
+    // Close yellow banner when X is clicked (will reappear on page refresh)
+    closeBannerYellowBtn?.addEventListener('click', () => {
+        notificationBannerYellow?.classList.add('hidden');
+    });
+
     // Load header and footer components if they exist
     const includeComponents = () => {
         document.querySelectorAll('[data-include]').forEach(element => {

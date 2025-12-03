@@ -511,16 +511,17 @@ nav ul li ul.dropdown li a:hover {
 }
 
 .resources-content {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     margin-bottom: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .resource-item {
     text-align: center;
-    flex: 1;
-    max-width: 300px;
     padding: 2rem;
     background-color: var(--background-color);
     border-radius: 8px;

@@ -554,6 +554,61 @@ nav ul li ul.dropdown li a:hover {
     text-decoration: underline;
 }
 
+/* Donate Section */
+.donate {
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--light-text);
+}
+
+.donate h2 {
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.donate-content {
+    display: flex;
+    justify-content: center;
+}
+
+.donate-item {
+    padding: 2rem 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    max-width: 400px;
+}
+
+.donate-item:hover {
+    transform: translateY(-5px);
+}
+
+.donate-item i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.donate-item h3 {
+    margin-bottom: 1rem;
+}
+
+.donate-item h3 a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.donate-item h3 a:hover {
+    color: var(--light-text);
+    text-decoration: underline;
+}
+
+.donate-item p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
 /* Contact Section */
 .contact {
     background-color: #fff;

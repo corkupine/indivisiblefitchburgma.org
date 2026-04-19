@@ -61,7 +61,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Load events from JSON
+    const loadEvents = () => {
+        const eventList = document.querySelector('.event-list');
+        if (!eventList) return;
+
+        fetch('data/events.json')
+            .then(response => response.json())
+            .then(events => {
+                eventList.innerHTML = events.map(event => `
+                    <div class="event">
+                        <div class="event-date">
+                            <span class="month">${event.month}</span>
+                            <span class="day">${event.day}</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>${event.title}</h3>
+                            <p class="event-time"><i class="fas fa-clock"></i>${event.time}</p>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> <a href="${event.mapLink}" target="_blank">${event.location}</a></p>
+                            <p>${event.description}${event.facebookLink || event.mobilizeLink ? ' More info on' : ''}${event.facebookLink ? ` <a href="${event.facebookLink}" target="_blank">Facebook</a>` : ''}${event.facebookLink && event.mobilizeLink ? ' and' : ''}${event.mobilizeLink ? ` <a href="${event.mobilizeLink}" target="_blank">Mobilize</a>` : ''}${event.facebookLink || event.mobilizeLink ? '.' : ''}</p>
+                        </div>
+                    </div>
+                `).join('');
+            })
+            .catch(error => {
+                console.error('Error loading events:', error);
+            });
+    };
+
     // Initialize components and smooth scrolling
     includeComponents();
     initSmoothScrolling();
+    loadEvents();
 });
